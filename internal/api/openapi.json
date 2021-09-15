@@ -118,100 +118,100 @@
             "default": 0,
             "minimum": 0,
             "maximum": 2
-        }
-      ]
-  },
-  "components": {
-    "schemas": {
-      "ValidationRequest": {
-        "type": "object",
-        "properties": {
-          "account": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "service": {
-            "type": "string"
-          },
-          "request_id": {
-            "type": "string"
-          },
-          "principal": {
-            "type": "string"
-          },
-          "size": {
-            "type": "integer"
-          },
-          "url": {
-            "type": "string",
-            "format": "uri"
-          },
-          "id": {
-            "type": "string"
-          },
-          "b64_identity": {
-            "type": "string"
-          },
-          "timestamp": {
-            "type": "string",
-            "format": "date-time"
           }
-        }
+        ]
       },
-      "ValidationResponse": {
-        "type": "object",
-        "properties": {
-          "account": {
-            "type": "string"
-          },
-          "request_id": {
-            "type": "string"
-          },
-          "service": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string",
-            "format": "uri"
-          },
-          "principal": {
-            "type": "string"
-          },
-          "b64_identity": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string"
-          },
-          "timestamp": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "validation": {
-            "type": "string",
-            "enum": [
-              "success",
-              "failure"
-            ]
-          },
-          "extras": {
+      "components": {
+        "schemas": {
+          "ValidationRequest": {
             "type": "object",
             "properties": {
+              "account": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "service": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "principal": {
+                "type": "string"
+              },
+              "size": {
+                "type": "integer"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
               "id": {
                 "type": "string"
               },
-              "satellite_managed": {
-                "type": "boolean"
+              "b64_identity": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
               }
-            },
-            "additionalProperties": {
-              "type": "string"
+            }
+          },
+          "ValidationResponse": {
+            "type": "object",
+            "properties": {
+              "account": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "service": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "principal": {
+                "type": "string"
+              },
+              "b64_identity": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "validation": {
+                "type": "string",
+                "enum": [
+                  "success",
+                  "failure"
+                ]
+              },
+              "extras": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "satellite_managed": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
             }
           }
         }
       }
     }
-  }
-}
